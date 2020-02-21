@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Walkthrough | Intro to R for High Schoolers</title>
+  <meta name="description" content="This is an introduction to installing and using R." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Walkthrough | Intro to R for High Schoolers" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is an introduction to installing and using R." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Walkthrough | Intro to R for High Schoolers" />
+  
+  <meta name="twitter:description" content="This is an introduction to installing and using R." />
+  
+
+<meta name="author" content="Scott LaForest" />
+
+
+<meta name="date" content="2020-02-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="minilab.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Intro to R for High Schoolers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#install-r"><i class="fa fa-check"></i><b>1.1</b> Install R</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#install-rstudio"><i class="fa fa-check"></i><b>1.2</b> Install RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="walkthrough.html"><a href="walkthrough.html"><i class="fa fa-check"></i><b>2</b> Walkthrough</a><ul>
+<li class="chapter" data-level="2.1" data-path="walkthrough.html"><a href="walkthrough.html#what-r-you-talking-about"><i class="fa fa-check"></i><b>2.1</b> What R you talking about?</a></li>
+<li class="chapter" data-level="2.2" data-path="walkthrough.html"><a href="walkthrough.html#walkthrough"><i class="fa fa-check"></i><b>2.2</b> Walkthrough</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="walkthrough.html"><a href="walkthrough.html#r-basics"><i class="fa fa-check"></i><b>2.2.1</b> R Basics</a></li>
+<li class="chapter" data-level="2.2.2" data-path="walkthrough.html"><a href="walkthrough.html#linear-regression-with-mtcars"><i class="fa fa-check"></i><b>2.2.2</b> Linear Regression with MTcars</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="minilab.html"><a href="minilab.html"><i class="fa fa-check"></i><b>3</b> Minilab</a><ul>
+<li class="chapter" data-level="3.1" data-path="minilab.html"><a href="minilab.html#r-markdown-intro"><i class="fa fa-check"></i><b>3.1</b> R Markdown Intro</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="minilab.html"><a href="minilab.html#q1-what-is-the-description-for-the-airquality-dataset"><i class="fa fa-check"></i><b>3.1.1</b> Q1: What is the description for the <code>airquality</code> dataset?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="minilab.html"><a href="minilab.html#q2-how-many-observations-and-how-many-variables-are-included-in-the-airquality-dataset"><i class="fa fa-check"></i><b>3.1.2</b> Q2: How many observations and how many variables are included in the <code>airquality</code> dataset?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="minilab.html"><a href="minilab.html#q3-what-variable-has-the-highest-correlation-with-the-temp-variable-what-is-the-correlation-coefficient"><i class="fa fa-check"></i><b>3.2</b> Q3: What variable has the highest correlation with the Temp variable? What is the correlation coefficient?</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="minilab.html"><a href="minilab.html#q4-which-row-and-column-seems-to-show-the-best-correlation-with-temp-with-temp-as-the-independent-variable"><i class="fa fa-check"></i><b>3.2.1</b> Q4: Which row and column seems to show the best correlation with Temp with Temp as the independent variable?</a></li>
+<li class="chapter" data-level="3.2.2" data-path="minilab.html"><a href="minilab.html#q5-what-are-the-alpha-and-beta-values-for-your-regression"><i class="fa fa-check"></i><b>3.2.2</b> Q5: What are the <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> values for your regression?</a></li>
+<li class="chapter" data-level="3.2.3" data-path="minilab.html"><a href="minilab.html#q6-what-is-the-r2-value-what-does-this-tell-us"><i class="fa fa-check"></i><b>3.2.3</b> Q6: What is the R^2 value? What does this tell us?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>4</b> Resources</a><ul>
+<li class="chapter" data-level="4.1" data-path="resources.html"><a href="resources.html#the-swirl-package"><i class="fa fa-check"></i><b>4.1</b> The swirl package</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Intro to R for High Schoolers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="walkthrough" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Walkthrough</h1>
+<div id="what-r-you-talking-about" class="section level2">
+<h2><span class="header-section-number">2.1</span> What R you talking about?</h2>
+<p>R is a programming language that is popular among mathematicians, scientists, staticians, and many other professional careers that need to analyze and understand large amounts of data. R and Python are the two most popluar languages for working with data. If you plan on going into a STEM field or plan to do any research you will most likely need to have an understanding of how to program in one of these two languages. Now is a great time to learn how to analyze data programmitically.</p>
+</div>
+<div id="walkthrough" class="section level2">
+<h2><span class="header-section-number">2.2</span> Walkthrough</h2>
+<div id="r-basics" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> R Basics</h3>
+<p>We will start by playing around on the Console. The console is in the lower left portion of the screen and should have a line that is blank except for a <code>&gt;</code> symbol. Place your cursor next to the <code>&gt;</code> to start typing inputs in for R to evaluate. R can be used as a basic calculator. Try typing some mathematical expressions then press enter and R will evaluate them.</p>
+<p>Follow along by typing the following commands into the R console.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">3</span> <span class="op">+</span><span class="st"> </span><span class="dv">4</span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">/</span><span class="dv">3</span></code></pre></div>
+<pre><code>## [1] 0.3333333</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="fl">2.5</span> <span class="op">*</span><span class="st"> </span><span class="dv">3</span></code></pre></div>
+<pre><code>## [1] 7.5</code></pre>
+<p>Nothing too impressive yet but R can do so much more. Think of a mathematical function and try evaluating an expression.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">64</span>)</code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cos</span>(<span class="dv">60</span>)</code></pre></div>
+<pre><code>## [1] -0.952413</code></pre>
+<p>Oops, we just calculated the cos of 60 radians! Let’s convert radians to degrees.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cos</span>(<span class="dv">60</span><span class="op">*</span>pi<span class="op">/</span><span class="dv">180</span>)</code></pre></div>
+<pre><code>## [1] 0.5</code></pre>
+<p>So far we’ve seen how R can function as a calculator but R can do so much more. Before we start working we need one more concept that will help us in our calculations. The programming concept of variables. A variable in programming acts as a bucket to hold a piece of data for later use. The benefit of using a variable is that we can set it equal to a value and use that value as many times as we want.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This line is a comment and will not be interpreted by R</span>
+<span class="co"># We use comments to help explain what our code is doing, whatever comes after the # is ignored.</span>
+<span class="co"># The syntax for a variable is as follows var_name &lt;- some_value</span>
+a &lt;-<span class="st"> </span><span class="dv">5</span>
+<span class="co"># Notice when you run this chucnk nothing prints out.</span></code></pre></div>
+<p>Now we can use a as many times as we want.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a</code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a<span class="op">*</span><span class="dv">3</span></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">b &lt;-<span class="st"> </span>a<span class="op">+</span><span class="dv">3</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">b</code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>That should be enough R for now. Lets do some linear regression.</p>
+<!-- 2. We need to install some packages before we can do anything else. We can think of a package like an app on our phone. When you first turn on a new phone you have the basic functionality that all other phones have. If you need more functionality, you install new apps. Packages are to R as apps are to your phone's operating system. One of the most useful packages is called `tidyverse`. The `tidyverse` provides, among many other things, a lot of useful functions that allow us to manipulate data and "tidy" it so that it is easier to analyze. For now, we just need to install it so that we can use some of the sample data in the package. Find the console, lower left portion of RStudio, and place your cursor next to the `>` symbol. -->
+<!-- Type the following code in the console. Notice once you start typing RStudio provides hints. You can press `tab` to select the function you want. -->
+<!-- ```{r} -->
+<!-- # install.packages('tidyverse') -->
+<!-- ``` -->
+<!-- The code above will start a long process that will download and install the necessary parts so that we can use the tidyverse.  -->
+</div>
+<div id="linear-regression-with-mtcars" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Linear Regression with MTcars</h3>
+<p>Follow along via the R console. Our goal with the walkthrough is to look at correlation between variables and use linear regression to predict or infer meaning in the data. Let’s start by looking at all the datasets that come installed in R. The code below should open another tab with a list of available datasets.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>()</code></pre></div>
+<p>We will start by looking at some relationships between variables in the mtcars dataset. Try the following code to learn more about the dataset.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?mtcars</code></pre></div>
+<p>Notice that we get the definitionn of each of the variables included in the data set as well as the number of rows and variables. However, we do not get any examples of the data. Now let’s take a look at a subset of the data.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(mtcars)</code></pre></div>
+<pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44 &quot;rval&quot;  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+<p>Now we will try to select a variable to predict the mpg of a car. Before we get into the analysis, we need to have a quick review of linear regression. One of the most common types of linear regression is the Least Squares Regression (LSR). The goal with LSR is to find the line that minimizes the residuals between the points in the data and the LSR line. Remember that the residuals are the difference between our predicted value vs the actual. In the plot below the residuals are shown as the red line from the actual data point to the predicted value on the line. <img src="ASDemo_files/figure-html/unnamed-chunk-16-1.png" width="672" /> The output of Least Squares Regression is a formula. In single variable regression the formula should look very similar to a typical slope-intercept form of an equation. <span class="math display">\[y = \alpha + \beta \cdot x\]</span> where <span class="math inline">\(\alpha\)</span> is the y-intercept of our LSR line and <span class="math inline">\(\beta\)</span> is the coefficient of our independent variable also known as the slope. Remember that intuitively, <span class="math inline">\(\beta\)</span> is the average increase or decrease for our dependent (y) variable when our independent (x) variable changes by one unit. R will do all of the work for us but it is useful to remember how to calculate both <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>.</p>
+<p><span class="math display">\[\beta = r \cdot \frac{S_y}{S_x}\]</span> where <span class="math inline">\(r\)</span> is the correlation coefficient between <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span>, <span class="math inline">\(S_y\)</span> is the standard deviation of the <span class="math inline">\(y\)</span> variable and <span class="math inline">\(S_x\)</span> is the standard deviation of the <span class="math inline">\(x\)</span> variable.</p>
+<p><span class="math display">\[\alpha = \overline y - \beta \cdot \overline x\]</span> Now we have the necessary equations to allow us to find the LSR line for a set of data.If we had too, we could now compute the equation of the line of best fit using the two formulas above. Before we find the regression formula we need to find a variable that correlates well with our independent variable, mpg. OUr first task is to get an overview of how each variable correlates with the mpg variable. A pairplot will give us a visual overview of the correlation between the variables.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pairs</span>(mtcars)</code></pre></div>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cor</span>(mtcars)[<span class="dv">1</span>,]</code></pre></div>
+<pre><code>##        mpg        cyl       disp         hp       drat         wt       qsec         vs         am       gear       carb 
+##  1.0000000 -0.8521620 -0.8475514 -0.7761684  0.6811719 -0.8676594  0.4186840  0.6640389  0.5998324  0.4802848 -0.5509251</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>disp, mtcars<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-19-2.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>hp, mtcars<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-19-3.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>drat, mtcars<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-19-4.png" width="672" /></p>
+<p>Lets use some variables to help us calculate <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># r can be calculated using the cor() function</span>
+r &lt;-<span class="st"> </span><span class="kw">cor</span>(<span class="dt">x =</span> mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg)
+<span class="co"># sd() calculates the standard deviation</span>
+sx &lt;-<span class="st"> </span><span class="kw">sd</span>(mtcars<span class="op">$</span>wt)
+sy &lt;-<span class="st"> </span><span class="kw">sd</span>(mtcars<span class="op">$</span>mpg)
+beta &lt;-<span class="st"> </span>r<span class="op">*</span>(sy<span class="op">/</span>sx)
+beta</code></pre></div>
+<pre><code>## [1] -5.344472</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ybar &lt;-<span class="st"> </span><span class="kw">mean</span>(mtcars<span class="op">$</span>mpg)
+xbar &lt;-<span class="st"> </span><span class="kw">mean</span>(mtcars<span class="op">$</span>wt)
+alpha &lt;-<span class="st"> </span>ybar <span class="op">-</span><span class="st"> </span>beta<span class="op">*</span>xbar
+alpha</code></pre></div>
+<pre><code>## [1] 37.28513</code></pre>
+<p>Now because I’m evil I decided to wait until the end to show a shortcut to calculate the equation of the LSR line. The lm() function allows us to do all of the above steps, and more, in one step.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?lm</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">model &lt;-<span class="st"> </span><span class="kw">lm</span>(mtcars<span class="op">$</span>mpg <span class="op">~</span><span class="st"> </span>mtcars<span class="op">$</span>wt)
+<span class="kw">summary</span>(model)</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = mtcars$mpg ~ mtcars$wt)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.5432 -2.3647 -0.1252  1.4096  6.8727 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  37.2851     1.8776  19.858  &lt; 2e-16 ***
+## mtcars$wt    -5.3445     0.5591  -9.559 1.29e-10 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.046 on 30 degrees of freedom
+## Multiple R-squared:  0.7528, Adjusted R-squared:  0.7446 
+## F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10</code></pre>
+<p>We can plot the line on top of our scatter plot to see our handywork!</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg)
+<span class="kw">abline</span>(model)</code></pre></div>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="minilab.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ASDemo.pdf", "ASDemo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

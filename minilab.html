@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Minilab | Intro to R for High Schoolers</title>
+  <meta name="description" content="This is an introduction to installing and using R." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Minilab | Intro to R for High Schoolers" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is an introduction to installing and using R." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Minilab | Intro to R for High Schoolers" />
+  
+  <meta name="twitter:description" content="This is an introduction to installing and using R." />
+  
+
+<meta name="author" content="Scott LaForest" />
+
+
+<meta name="date" content="2020-02-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="walkthrough.html"/>
+<link rel="next" href="resources.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Intro to R for High Schoolers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#install-r"><i class="fa fa-check"></i><b>1.1</b> Install R</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#install-rstudio"><i class="fa fa-check"></i><b>1.2</b> Install RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="walkthrough.html"><a href="walkthrough.html"><i class="fa fa-check"></i><b>2</b> Walkthrough</a><ul>
+<li class="chapter" data-level="2.1" data-path="walkthrough.html"><a href="walkthrough.html#what-r-you-talking-about"><i class="fa fa-check"></i><b>2.1</b> What R you talking about?</a></li>
+<li class="chapter" data-level="2.2" data-path="walkthrough.html"><a href="walkthrough.html#walkthrough"><i class="fa fa-check"></i><b>2.2</b> Walkthrough</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="walkthrough.html"><a href="walkthrough.html#r-basics"><i class="fa fa-check"></i><b>2.2.1</b> R Basics</a></li>
+<li class="chapter" data-level="2.2.2" data-path="walkthrough.html"><a href="walkthrough.html#linear-regression-with-mtcars"><i class="fa fa-check"></i><b>2.2.2</b> Linear Regression with MTcars</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="minilab.html"><a href="minilab.html"><i class="fa fa-check"></i><b>3</b> Minilab</a><ul>
+<li class="chapter" data-level="3.1" data-path="minilab.html"><a href="minilab.html#r-markdown-intro"><i class="fa fa-check"></i><b>3.1</b> R Markdown Intro</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="minilab.html"><a href="minilab.html#q1-what-is-the-description-for-the-airquality-dataset"><i class="fa fa-check"></i><b>3.1.1</b> Q1: What is the description for the <code>airquality</code> dataset?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="minilab.html"><a href="minilab.html#q2-how-many-observations-and-how-many-variables-are-included-in-the-airquality-dataset"><i class="fa fa-check"></i><b>3.1.2</b> Q2: How many observations and how many variables are included in the <code>airquality</code> dataset?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="minilab.html"><a href="minilab.html#q3-what-variable-has-the-highest-correlation-with-the-temp-variable-what-is-the-correlation-coefficient"><i class="fa fa-check"></i><b>3.2</b> Q3: What variable has the highest correlation with the Temp variable? What is the correlation coefficient?</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="minilab.html"><a href="minilab.html#q4-which-row-and-column-seems-to-show-the-best-correlation-with-temp-with-temp-as-the-independent-variable"><i class="fa fa-check"></i><b>3.2.1</b> Q4: Which row and column seems to show the best correlation with Temp with Temp as the independent variable?</a></li>
+<li class="chapter" data-level="3.2.2" data-path="minilab.html"><a href="minilab.html#q5-what-are-the-alpha-and-beta-values-for-your-regression"><i class="fa fa-check"></i><b>3.2.2</b> Q5: What are the <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> values for your regression?</a></li>
+<li class="chapter" data-level="3.2.3" data-path="minilab.html"><a href="minilab.html#q6-what-is-the-r2-value-what-does-this-tell-us"><i class="fa fa-check"></i><b>3.2.3</b> Q6: What is the R^2 value? What does this tell us?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>4</b> Resources</a><ul>
+<li class="chapter" data-level="4.1" data-path="resources.html"><a href="resources.html#the-swirl-package"><i class="fa fa-check"></i><b>4.1</b> The swirl package</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Intro to R for High Schoolers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="minilab" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Minilab</h1>
+<div id="r-markdown-intro" class="section level2">
+<h2><span class="header-section-number">3.1</span> R Markdown Intro</h2>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>The way we will use it is to prove your R skills and apply what we have learned so far. The great thing about R Markdown is that you can type regular text as well as run R commands. R markdown files have <code>chunks</code> that let you run R in the same document. Try it below by checking the available datasets by calling the <code>data()</code> function. Type in <code>data()</code> and press the run (little green triangle) button on the chunk.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>()</code></pre></div>
+<p>To complete this minilab you will need to type your code and answers in the code chunks. You have already run some code but you can answer questions by typing your answer between the single quotes and run the chunk.</p>
+<div id="q1-what-is-the-description-for-the-airquality-dataset" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Q1: What is the description for the <code>airquality</code> dataset?</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">description &lt;-<span class="st"> &#39;New York Air Quality Measurements&#39;</span>
+<span class="kw">print</span>(description)</code></pre></div>
+<pre><code>## [1] &quot;New York Air Quality Measurements&quot;</code></pre>
+<p>The rest of the minilab will require you to type either an answer or some code in every code chunk.</p>
+<p>Let’s continue by exploring the <code>airquality</code> dataset. Type in the code to call for help on the dataset.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># type your code on the line below</span></code></pre></div>
+</div>
+<div id="q2-how-many-observations-and-how-many-variables-are-included-in-the-airquality-dataset" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Q2: How many observations and how many variables are included in the <code>airquality</code> dataset?</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Type your answers between the &#39;&#39; for each answer.</span>
+observations &lt;-<span class="st"> &#39;&#39;</span>
+variables &lt;-<span class="st"> &#39;&#39;</span>
+<span class="co"># Do not type below this line</span>
+<span class="kw">paste</span>(<span class="st">&#39;There are &#39;</span> , observations , <span class="st">&#39; observations and &#39;</span> , variables, <span class="st">&#39; variables.&#39;</span>)</code></pre></div>
+<pre><code>## [1] &quot;There are    observations and    variables.&quot;</code></pre>
+<p>Take a look at the first five rows of the <code>airquality</code> dataset.</p>
+<p>Lets look at the correlation between each of the variables. Remember to only include complete observations.</p>
+</div>
+</div>
+<div id="q3-what-variable-has-the-highest-correlation-with-the-temp-variable-what-is-the-correlation-coefficient" class="section level2">
+<h2><span class="header-section-number">3.2</span> Q3: What variable has the highest correlation with the Temp variable? What is the correlation coefficient?</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">variable_name &lt;-<span class="st"> &#39;&#39;</span>
+cor_coeff &lt;-<span class="st"> &#39;&#39;</span>
+
+<span class="co"># Do not type below this line</span>
+<span class="kw">paste</span>( variable_name , <span class="st">&#39;is the most highly correlated with Temp and has a correlation coefficient of&#39;</span> , cor_coeff)</code></pre></div>
+<pre><code>## [1] &quot; is the most highly correlated with Temp and has a correlation coefficient of &quot;</code></pre>
+<p>Lets look at the correlation in a more visual manner. Plot the a scatterplot of each variable in the dataset, also known as a pair plot.</p>
+<div id="q4-which-row-and-column-seems-to-show-the-best-correlation-with-temp-with-temp-as-the-independent-variable" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Q4: Which row and column seems to show the best correlation with Temp with Temp as the independent variable?</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">row_num &lt;-<span class="st"> &#39;&#39;</span>
+col_num &lt;-<span class="st"> &#39;&#39;</span>
+
+<span class="co"># Do not type below this line</span>
+<span class="kw">paste</span>(<span class="st">&#39;Row X Column:&#39;</span>,row_num,<span class="st">&quot;X&quot;</span>,col_num, <span class="st">&#39;which is&#39;</span>, <span class="kw">colnames</span>(airquality)[<span class="kw">as.numeric</span>(row_num)], <span class="st">&#39;and&#39;</span>, <span class="kw">colnames</span>(airquality)[<span class="kw">as.numeric</span>(col_num)] )</code></pre></div>
+<pre><code>## [1] &quot;Row X Column:  X  which is NA and NA&quot;</code></pre>
+<p>Pair plots are can be hard to read. Plot a scatter plot for Ozone vs Temp, Solar.R vs Temp, and Wind vs Temp.</p>
+<p>Finally, we need to fit a regression line to our data. Choosing the independent variable that is most correlated, fit a model and print out the summary of the model.</p>
+</div>
+<div id="q5-what-are-the-alpha-and-beta-values-for-your-regression" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Q5: What are the <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> values for your regression?</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">alpha &lt;-<span class="st"> &#39;&#39;</span>
+beta &lt;-<span class="st"> &#39;&#39;</span>
+
+<span class="kw">paste</span>(<span class="st">&#39;Your equation is y = &#39;</span>, alpha, <span class="st">&#39; + &#39;</span> , beta, <span class="st">&#39;X&#39;</span>, <span class="dt">sep =</span> <span class="st">&quot;&quot;</span>)</code></pre></div>
+<pre><code>## [1] &quot;Your equation is y =  + X&quot;</code></pre>
+</div>
+<div id="q6-what-is-the-r2-value-what-does-this-tell-us" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Q6: What is the R^2 value? What does this tell us?</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">r2 &lt;-<span class="st"> &#39;&#39;</span>
+meaning &lt;-<span class="st"> &#39;&#39;</span>
+
+<span class="kw">paste</span>(<span class="st">&#39;R^2 =&#39;</span> , r2,<span class="st">&#39;and&#39;</span>, meaning)</code></pre></div>
+<pre><code>## [1] &quot;R^2 =  and &quot;</code></pre>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="walkthrough.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ASDemo.pdf", "ASDemo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

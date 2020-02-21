@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Intro to R for High Schoolers</title>
+  <meta name="description" content="This is an introduction to installing and using R." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Intro to R for High Schoolers" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is an introduction to installing and using R." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Intro to R for High Schoolers" />
+  
+  <meta name="twitter:description" content="This is an introduction to installing and using R." />
+  
+
+<meta name="author" content="Scott LaForest" />
+
+
+<meta name="date" content="2020-02-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="walkthrough.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Intro to R for High Schoolers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#install-r"><i class="fa fa-check"></i><b>1.1</b> Install R</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#install-rstudio"><i class="fa fa-check"></i><b>1.2</b> Install RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="walkthrough.html"><a href="walkthrough.html"><i class="fa fa-check"></i><b>2</b> Walkthrough</a><ul>
+<li class="chapter" data-level="2.1" data-path="walkthrough.html"><a href="walkthrough.html#what-r-you-talking-about"><i class="fa fa-check"></i><b>2.1</b> What R you talking about?</a></li>
+<li class="chapter" data-level="2.2" data-path="walkthrough.html"><a href="walkthrough.html#walkthrough"><i class="fa fa-check"></i><b>2.2</b> Walkthrough</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="walkthrough.html"><a href="walkthrough.html#r-basics"><i class="fa fa-check"></i><b>2.2.1</b> R Basics</a></li>
+<li class="chapter" data-level="2.2.2" data-path="walkthrough.html"><a href="walkthrough.html#linear-regression-with-mtcars"><i class="fa fa-check"></i><b>2.2.2</b> Linear Regression with MTcars</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="minilab.html"><a href="minilab.html"><i class="fa fa-check"></i><b>3</b> Minilab</a><ul>
+<li class="chapter" data-level="3.1" data-path="minilab.html"><a href="minilab.html#r-markdown-intro"><i class="fa fa-check"></i><b>3.1</b> R Markdown Intro</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="minilab.html"><a href="minilab.html#q1-what-is-the-description-for-the-airquality-dataset"><i class="fa fa-check"></i><b>3.1.1</b> Q1: What is the description for the <code>airquality</code> dataset?</a></li>
+<li class="chapter" data-level="3.1.2" data-path="minilab.html"><a href="minilab.html#q2-how-many-observations-and-how-many-variables-are-included-in-the-airquality-dataset"><i class="fa fa-check"></i><b>3.1.2</b> Q2: How many observations and how many variables are included in the <code>airquality</code> dataset?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="minilab.html"><a href="minilab.html#q3-what-variable-has-the-highest-correlation-with-the-temp-variable-what-is-the-correlation-coefficient"><i class="fa fa-check"></i><b>3.2</b> Q3: What variable has the highest correlation with the Temp variable? What is the correlation coefficient?</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="minilab.html"><a href="minilab.html#q4-which-row-and-column-seems-to-show-the-best-correlation-with-temp-with-temp-as-the-independent-variable"><i class="fa fa-check"></i><b>3.2.1</b> Q4: Which row and column seems to show the best correlation with Temp with Temp as the independent variable?</a></li>
+<li class="chapter" data-level="3.2.2" data-path="minilab.html"><a href="minilab.html#q5-what-are-the-alpha-and-beta-values-for-your-regression"><i class="fa fa-check"></i><b>3.2.2</b> Q5: What are the <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> values for your regression?</a></li>
+<li class="chapter" data-level="3.2.3" data-path="minilab.html"><a href="minilab.html#q6-what-is-the-r2-value-what-does-this-tell-us"><i class="fa fa-check"></i><b>3.2.3</b> Q6: What is the R^2 value? What does this tell us?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>4</b> Resources</a><ul>
+<li class="chapter" data-level="4.1" data-path="resources.html"><a href="resources.html#the-swirl-package"><i class="fa fa-check"></i><b>4.1</b> The swirl package</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Intro to R for High Schoolers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Intro to R for High Schoolers</h1>
+<p class="author"><em>Scott LaForest</em></p>
+<p class="date"><em>2020-02-20</em></p>
+</div>
+<div id="prerequisites" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Prerequisites</h1>
+<p>We will have to install a few things before we get started using R to help us understand math and statistics.</p>
+<div id="install-r" class="section level2">
+<h2><span class="header-section-number">1.1</span> Install R</h2>
+<p>Download and install the most recent version of R. <a href="https://cran.rstudio.com/">Install R</a>. If you are running the most updated version of OSX you should be fine to select the first download file, version 3.6.2.</p>
+</div>
+<div id="install-rstudio" class="section level2">
+<h2><span class="header-section-number">1.2</span> Install RStudio</h2>
+<p>RStudion is the most popular integrated development environment (IDE) for R. <a href="https://rstudio.com/products/rstudio/download/#download">Download RStudio</a>. Again, if you are running the most updated version of OSX you should be fine to download the most recent version of RStudio.</p>
+<p>That’s it, now you are ready to follow along with the walkthrough.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="walkthrough.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ASDemo.pdf", "ASDemo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
