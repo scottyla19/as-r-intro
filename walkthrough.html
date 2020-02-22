@@ -24,7 +24,7 @@
 <meta name="author" content="Scott LaForest" />
 
 
-<meta name="date" content="2020-02-20" />
+<meta name="date" content="2020-02-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -129,7 +129,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>4</b> Resources</a><ul>
-<li class="chapter" data-level="4.1" data-path="resources.html"><a href="resources.html#the-swirl-package"><i class="fa fa-check"></i><b>4.1</b> The swirl package</a></li>
+<li class="chapter" data-level="4.1" data-path="resources.html"><a href="resources.html#r-packages"><i class="fa fa-check"></i><b>4.1</b> R Packages</a></li>
+<li class="chapter" data-level="4.2" data-path="resources.html"><a href="resources.html#the-swirl-package"><i class="fa fa-check"></i><b>4.2</b> The swirl package</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -161,7 +162,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2><span class="header-section-number">2.2</span> Walkthrough</h2>
 <div id="r-basics" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> R Basics</h3>
-<p>We will start by playing around on the Console. The console is in the lower left portion of the screen and should have a line that is blank except for a <code>&gt;</code> symbol. Place your cursor next to the <code>&gt;</code> to start typing inputs in for R to evaluate. R can be used as a basic calculator. Try typing some mathematical expressions then press enter and R will evaluate them.</p>
+<p>We will start by playing around on the R Console. The console is in the lower left portion of the screen and should have a line that is blank except for a <code>&gt;</code> symbol. Place your cursor next to the <code>&gt;</code> to start typing inputs for R to evaluate. R can be used as a basic calculator. Try typing some mathematical expressions then press enter and R will evaluate them.</p>
 <p>Follow along by typing the following commands into the R console.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">3</span> <span class="op">+</span><span class="st"> </span><span class="dv">4</span></code></pre></div>
 <pre><code>## [1] 7</code></pre>
@@ -169,7 +170,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <pre><code>## [1] 0.3333333</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="fl">2.5</span> <span class="op">*</span><span class="st"> </span><span class="dv">3</span></code></pre></div>
 <pre><code>## [1] 7.5</code></pre>
-<p>Nothing too impressive yet but R can do so much more. Think of a mathematical function and try evaluating an expression.</p>
+<p>Nothing too impressive yet but that’s not all R can do. Think of a mathematical function and try evaluating an expression.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">64</span>)</code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cos</span>(<span class="dv">60</span>)</code></pre></div>
@@ -183,7 +184,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="co"># The syntax for a variable is as follows var_name &lt;- some_value</span>
 a &lt;-<span class="st"> </span><span class="dv">5</span>
 <span class="co"># Notice when you run this chucnk nothing prints out.</span></code></pre></div>
-<p>Now we can use a as many times as we want.</p>
+<p>Now we can use <code>a</code> as many times as we want.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a</code></pre></div>
 <pre><code>## [1] 5</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a<span class="op">*</span><span class="dv">3</span></code></pre></div>
@@ -191,13 +192,7 @@ a &lt;-<span class="st"> </span><span class="dv">5</span>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">b &lt;-<span class="st"> </span>a<span class="op">+</span><span class="dv">3</span></code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">b</code></pre></div>
 <pre><code>## [1] 8</code></pre>
-<p>That should be enough R for now. Lets do some linear regression.</p>
-<!-- 2. We need to install some packages before we can do anything else. We can think of a package like an app on our phone. When you first turn on a new phone you have the basic functionality that all other phones have. If you need more functionality, you install new apps. Packages are to R as apps are to your phone's operating system. One of the most useful packages is called `tidyverse`. The `tidyverse` provides, among many other things, a lot of useful functions that allow us to manipulate data and "tidy" it so that it is easier to analyze. For now, we just need to install it so that we can use some of the sample data in the package. Find the console, lower left portion of RStudio, and place your cursor next to the `>` symbol. -->
-<!-- Type the following code in the console. Notice once you start typing RStudio provides hints. You can press `tab` to select the function you want. -->
-<!-- ```{r} -->
-<!-- # install.packages('tidyverse') -->
-<!-- ``` -->
-<!-- The code above will start a long process that will download and install the necessary parts so that we can use the tidyverse.  -->
+<p>That should be enough R for now. Lets move on to linear regression.</p>
 </div>
 <div id="linear-regression-with-mtcars" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Linear Regression with MTcars</h3>
@@ -211,28 +206,31 @@ a &lt;-<span class="st"> </span><span class="dv">5</span>
 ## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
 ## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
 ## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
-## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44 &quot;rval&quot;  0    3    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
 ## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
 ## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
-<p>Now we will try to select a variable to predict the mpg of a car. Before we get into the analysis, we need to have a quick review of linear regression. One of the most common types of linear regression is the Least Squares Regression (LSR). The goal with LSR is to find the line that minimizes the residuals between the points in the data and the LSR line. Remember that the residuals are the difference between our predicted value vs the actual. In the plot below the residuals are shown as the red line from the actual data point to the predicted value on the line. <img src="ASDemo_files/figure-html/unnamed-chunk-16-1.png" width="672" /> The output of Least Squares Regression is a formula. In single variable regression the formula should look very similar to a typical slope-intercept form of an equation. <span class="math display">\[y = \alpha + \beta \cdot x\]</span> where <span class="math inline">\(\alpha\)</span> is the y-intercept of our LSR line and <span class="math inline">\(\beta\)</span> is the coefficient of our independent variable also known as the slope. Remember that intuitively, <span class="math inline">\(\beta\)</span> is the average increase or decrease for our dependent (y) variable when our independent (x) variable changes by one unit. R will do all of the work for us but it is useful to remember how to calculate both <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>.</p>
+<p>Now we will try to select a variable to predict the mpg of a car. Before we get into the analysis, we need to have a quick review of linear regression. One of the most common types of linear regression is the Least Squares Regression (LSR). The goal with LSR is to find the line that minimizes the residuals between the points in the data and the LSR line. Remember that the residuals are the difference between our predicted value vs the actual. In the plot below the residuals are shown as the red line from the actual data point to the predicted value on the line. <img src="ASDemo_files/figure-html/unnamed-chunk-22-1.png" width="672" /> The output of Least Squares Regression is a formula. In single variable regression the formula should look very similar to a typical slope-intercept form of an equation. <span class="math display">\[y = \alpha + \beta \cdot x\]</span> where <span class="math inline">\(\alpha\)</span> is the y-intercept of our LSR line and <span class="math inline">\(\beta\)</span> is the coefficient of our independent variable also known as the slope. Remember that intuitively, <span class="math inline">\(\beta\)</span> is the average increase or decrease for our dependent (y) variable when our independent (x) variable changes by one unit. R will do all of the work for us but it is useful to remember how to calculate both <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>.</p>
 <p><span class="math display">\[\beta = r \cdot \frac{S_y}{S_x}\]</span> where <span class="math inline">\(r\)</span> is the correlation coefficient between <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span>, <span class="math inline">\(S_y\)</span> is the standard deviation of the <span class="math inline">\(y\)</span> variable and <span class="math inline">\(S_x\)</span> is the standard deviation of the <span class="math inline">\(x\)</span> variable.</p>
-<p><span class="math display">\[\alpha = \overline y - \beta \cdot \overline x\]</span> Now we have the necessary equations to allow us to find the LSR line for a set of data.If we had too, we could now compute the equation of the line of best fit using the two formulas above. Before we find the regression formula we need to find a variable that correlates well with our independent variable, mpg. OUr first task is to get an overview of how each variable correlates with the mpg variable. A pairplot will give us a visual overview of the correlation between the variables.</p>
+<p><span class="math display">\[\alpha = \overline y - \beta \cdot \overline x\]</span> Now we have the necessary equations to allow us to find the LSR line for a set of data. If we had too, we could now compute the equation of the line of best fit using the two formulas above. Before we find the regression formula we need to find a variable that correlates well with our independent variable, mpg. Our first task is to get an overview of how each variable correlates with the mpg variable. A pairplot will give us a visual overview of the correlation between the variables.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pairs</span>(mtcars)</code></pre></div>
-<p><img src="ASDemo_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cor</span>(mtcars)[<span class="dv">1</span>,]</code></pre></div>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-23-1.png" width="672" /> Whoa, that’s a lot of information. However, we are interested in predicting mpg from a different dependent variable and we only need to look at the first row. It seems that <code>wt</code>, <code>disp</code>, <code>cyl</code>, <code>drat</code>,and <code>hp</code> might have some correlation with Temp. Lets plot each relationship separately with the following code.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>disp, mtcars<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-24-2.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>hp, mtcars<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-24-3.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>cyl, mtcars<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-24-4.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>drat, mtcars<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-24-5.png" width="672" /> Which plot seems to show the highest correlation? Possibly <code>wt</code> is the highest negative correlation while <code>drat</code> seems to have a slightly positive correlation. Lets use the correlation coefficient to see for sure. The <code>cor()</code> function will calculate the correlation coefficient for us. One side note, we need to include the <code>use = 'complete.obs'</code> option to omit rows with blank values.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># cor without blanks and to make it easier to read only include the first row with [1,]</span>
+<span class="kw">cor</span>(mtcars, <span class="dt">use =</span> <span class="st">&#39;complete.obs&#39;</span>)[<span class="dv">1</span>,]</code></pre></div>
 <pre><code>##        mpg        cyl       disp         hp       drat         wt       qsec         vs         am       gear       carb 
 ##  1.0000000 -0.8521620 -0.8475514 -0.7761684  0.6811719 -0.8676594  0.4186840  0.6640389  0.5998324  0.4802848 -0.5509251</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg)</code></pre></div>
-<p><img src="ASDemo_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>disp, mtcars<span class="op">$</span>mpg)</code></pre></div>
-<p><img src="ASDemo_files/figure-html/unnamed-chunk-19-2.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>hp, mtcars<span class="op">$</span>mpg)</code></pre></div>
-<p><img src="ASDemo_files/figure-html/unnamed-chunk-19-3.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>drat, mtcars<span class="op">$</span>mpg)</code></pre></div>
-<p><img src="ASDemo_files/figure-html/unnamed-chunk-19-4.png" width="672" /></p>
 <p>Lets use some variables to help us calculate <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># r can be calculated using the cor() function</span>
-r &lt;-<span class="st"> </span><span class="kw">cor</span>(<span class="dt">x =</span> mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg)
+r &lt;-<span class="st"> </span><span class="kw">cor</span>(<span class="dt">x =</span> mtcars<span class="op">$</span>wt, <span class="dt">y =</span> mtcars<span class="op">$</span>mpg)
 <span class="co"># sd() calculates the standard deviation</span>
 sx &lt;-<span class="st"> </span><span class="kw">sd</span>(mtcars<span class="op">$</span>wt)
 sy &lt;-<span class="st"> </span><span class="kw">sd</span>(mtcars<span class="op">$</span>mpg)
@@ -244,10 +242,12 @@ xbar &lt;-<span class="st"> </span><span class="kw">mean</span>(mtcars<span clas
 alpha &lt;-<span class="st"> </span>ybar <span class="op">-</span><span class="st"> </span>beta<span class="op">*</span>xbar
 alpha</code></pre></div>
 <pre><code>## [1] 37.28513</code></pre>
-<p>Now because I’m evil I decided to wait until the end to show a shortcut to calculate the equation of the LSR line. The lm() function allows us to do all of the above steps, and more, in one step.</p>
+<p>Now because I’m evil I decided to wait until the end to show a shortcut to calculate the equation of the LSR line. The lm() function allows us to do all of the above steps, and more, in one step. Look at the help documentation for the <code>lm()</code> function.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?lm</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">model &lt;-<span class="st"> </span><span class="kw">lm</span>(mtcars<span class="op">$</span>mpg <span class="op">~</span><span class="st"> </span>mtcars<span class="op">$</span>wt)
-<span class="kw">summary</span>(model)</code></pre></div>
+<p>To use the <code>lm()</code> function, it is best to save the outcome in a variable. Also, the function parameter is a little weird and the syntax for the function parameter is <code>(dependent_variable ~ independent_variable)</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">model &lt;-<span class="st"> </span><span class="kw">lm</span>(mtcars<span class="op">$</span>mpg <span class="op">~</span><span class="st"> </span>mtcars<span class="op">$</span>wt)</code></pre></div>
+<p>To see the outcome of our linear model we can use the <code>summary()</code> function.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(model)</code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = mtcars$mpg ~ mtcars$wt)
@@ -269,7 +269,7 @@ alpha</code></pre></div>
 <p>We can plot the line on top of our scatter plot to see our handywork!</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg)
 <span class="kw">abline</span>(model)</code></pre></div>
-<p><img src="ASDemo_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p><img src="ASDemo_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
 
 </div>
 </div>

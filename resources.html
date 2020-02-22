@@ -24,7 +24,7 @@
 <meta name="author" content="Scott LaForest" />
 
 
-<meta name="date" content="2020-02-20" />
+<meta name="date" content="2020-02-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -129,7 +129,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>4</b> Resources</a><ul>
-<li class="chapter" data-level="4.1" data-path="resources.html"><a href="resources.html#the-swirl-package"><i class="fa fa-check"></i><b>4.1</b> The swirl package</a></li>
+<li class="chapter" data-level="4.1" data-path="resources.html"><a href="resources.html#r-packages"><i class="fa fa-check"></i><b>4.1</b> R Packages</a></li>
+<li class="chapter" data-level="4.2" data-path="resources.html"><a href="resources.html#the-swirl-package"><i class="fa fa-check"></i><b>4.2</b> The swirl package</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -153,9 +154,20 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="resources" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Resources</h1>
+<div id="r-packages" class="section level2">
+<h2><span class="header-section-number">4.1</span> R Packages</h2>
+<p>We need to install a package before so that we can complete a minilab. We can think of a package like an app on our phone. When you first turn on a new phone you have the basic functionality that all other phones have. If you need more functionality, you install new apps. Packages are to R as apps are to your phone’s operating system. The <a href="https://swirlstats.com/students.html">swirl</a> package is a great way to learn how to use the R programming language. Install the package, run it, and learn R in the R console! Before we start we need to download a swirl course that we can use to test our understanding so far. [Download this file]</p>
+<p>Type the following code in the console. Notice once you start typing RStudio provides hints. You can press <code>tab</code> to select the function you want. We need to first download and install the package with <code>install.packages()</code> function.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&#39;swirl&#39;</span>)</code></pre></div>
+<pre><code>## Error in install.packages : Updating loaded packages</code></pre>
+<p>The code above will start a process that will download and install the necessary parts so that we can use the swirl package.</p>
+<p>Once the package is installed we need to tell R to use it with the <code>library()</code> function.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(swirlify)</code></pre></div>
+<p>Now we can start the swirl app with the <code>swirl()</code> function.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">swirl</span>()</code></pre></div>
+</div>
 <div id="the-swirl-package" class="section level2">
-<h2><span class="header-section-number">4.1</span> The swirl package</h2>
-<p>The <a href="https://swirlstats.com/students.html">swirl</a> package is a great way to learn how to use the R programming language. Install the package, run it, and learn R in the R console!</p>
+<h2><span class="header-section-number">4.2</span> The swirl package</h2>
 
 </div>
 </div>
