@@ -24,7 +24,7 @@
 <meta name="author" content="Scott LaForest" />
 
 
-<meta name="date" content="2020-02-22" />
+<meta name="date" content="2020-02-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -182,7 +182,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="co"># We use comments to help explain what our code is doing, whatever comes after the # is ignored.</span>
 <span class="co"># The syntax for a variable is as follows var_name &lt;- some_value</span>
 a &lt;-<span class="st"> </span><span class="dv">5</span>
-<span class="co"># Notice when you run this chucnk nothing prints out.</span></code></pre></div>
+<span class="co"># Notice when you run this chunk nothing prints out.</span></code></pre></div>
 <p>Now we can use <code>a</code> as many times as we want.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a</code></pre></div>
 <pre><code>## [1] 5</code></pre>
@@ -199,7 +199,7 @@ a &lt;-<span class="st"> </span><span class="dv">5</span>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>()</code></pre></div>
 <p>We will start by looking at some relationships between variables in the mtcars dataset. Try the following code to learn more about the dataset.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?mtcars</code></pre></div>
-<p>Notice that we get the definitionn of each of the variables included in the data set as well as the number of rows and variables. However, we do not get any examples of the data. Now let’s take a look at a subset of the data.</p>
+<p>Notice that we get the definition of each of the variables included in the data set as well as the number of rows and variables. However, we do not get any examples of the data. Now let’s take a look at a subset of the data.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(mtcars)</code></pre></div>
 <pre><code>##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
 ## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
@@ -210,7 +210,7 @@ a &lt;-<span class="st"> </span><span class="dv">5</span>
 ## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
 <p>Now we will try to select a variable to predict the mpg of a car. Before we get into the analysis, we need to have a quick review of linear regression. One of the most common types of linear regression is the Least Squares Regression (LSR). The goal with LSR is to find the line that minimizes the residuals between the points in the data and the LSR line. Remember that the residuals are the difference between our predicted value vs the actual. In the plot below the residuals are shown as the red line from the actual data point to the predicted value on the line. <img src="ASDemo_files/figure-html/unnamed-chunk-16-1.png" width="672" /> The output of Least Squares Regression is a formula. In single variable regression the formula should look very similar to a typical slope-intercept form of an equation. <span class="math display">\[y = \alpha + \beta \cdot x\]</span> where <span class="math inline">\(\alpha\)</span> is the y-intercept of our LSR line and <span class="math inline">\(\beta\)</span> is the coefficient of our independent variable also known as the slope. Remember that intuitively, <span class="math inline">\(\beta\)</span> is the average increase or decrease for our dependent (y) variable when our independent (x) variable changes by one unit. R will do all of the work for us but it is useful to remember how to calculate both <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>.</p>
 <p><span class="math display">\[\beta = r \cdot \frac{S_y}{S_x}\]</span> where <span class="math inline">\(r\)</span> is the correlation coefficient between <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span>, <span class="math inline">\(S_y\)</span> is the standard deviation of the <span class="math inline">\(y\)</span> variable and <span class="math inline">\(S_x\)</span> is the standard deviation of the <span class="math inline">\(x\)</span> variable.</p>
-<p><span class="math display">\[\alpha = \overline y - \beta \cdot \overline x\]</span> Now we have the necessary equations to allow us to find the LSR line for a set of data. If we had too, we could now compute the equation of the line of best fit using the two formulas above. Before we find the regression formula we need to find a variable that correlates well with our independent variable, mpg. Our first task is to get an overview of how each variable correlates with the mpg variable. A pairplot will give us a visual overview of the correlation between the variables.</p>
+<p><span class="math display">\[\alpha = \overline y - \beta \cdot \overline x\]</span> Now we have the necessary equations to allow us to find the LSR line for a set of data. If we had to, we could now compute the equation of the line of best fit using the two formulas above. Before we find the regression formula we need to find a variable that correlates well with our independent variable, mpg. Our first task is to get an overview of how each variable correlates with the mpg variable. A pairplot will give us a visual overview of the correlation between the variables.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pairs</span>(mtcars)</code></pre></div>
 <p><img src="ASDemo_files/figure-html/unnamed-chunk-17-1.png" width="672" /> Whoa, that’s a lot of information. However, we are interested in predicting mpg from a different dependent variable and we only need to look at the first row. It seems that <code>wt</code>, <code>disp</code>, <code>cyl</code>, <code>drat</code>,and <code>hp</code> might have some correlation with Temp. Lets plot each relationship separately with the following code.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg)</code></pre></div>
