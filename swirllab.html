@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Resources | Intro to R for High Schoolers</title>
+  <title>Chapter 4 Swirl Minilab | Intro to R for High Schoolers</title>
   <meta name="description" content="This is an introduction to installing and using R." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Resources | Intro to R for High Schoolers" />
+  <meta property="og:title" content="Chapter 4 Swirl Minilab | Intro to R for High Schoolers" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Resources | Intro to R for High Schoolers" />
+  <meta name="twitter:title" content="Chapter 4 Swirl Minilab | Intro to R for High Schoolers" />
   
   <meta name="twitter:description" content="This is an introduction to installing and using R." />
   
@@ -128,9 +128,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.2.3" data-path="minilab.html"><a href="minilab.html#q6-what-is-the-r2-value-what-does-this-tell-us"><i class="fa fa-check"></i><b>3.2.3</b> Q6: What is the R^2 value? What does this tell us?</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>4</b> Resources</a><ul>
-<li class="chapter" data-level="4.1" data-path="resources.html"><a href="resources.html#r-packages"><i class="fa fa-check"></i><b>4.1</b> R Packages</a></li>
-<li class="chapter" data-level="4.2" data-path="resources.html"><a href="resources.html#the-swirl-package"><i class="fa fa-check"></i><b>4.2</b> The swirl package</a></li>
+<li class="chapter" data-level="4" data-path="swirllab.html"><a href="swirllab.html"><i class="fa fa-check"></i><b>4</b> Swirl Minilab</a><ul>
+<li class="chapter" data-level="4.1" data-path="swirllab.html"><a href="swirllab.html#r-packages"><i class="fa fa-check"></i><b>4.1</b> R Packages</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -152,21 +151,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="resources" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Resources</h1>
+<div id="swirllab" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Swirl Minilab</h1>
 <div id="r-packages" class="section level2">
 <h2><span class="header-section-number">4.1</span> R Packages</h2>
-<p>We need to install a package before so that we can complete a minilab. We can think of a package like an app on our phone. When you first turn on a new phone you have the basic functionality that all other phones have. If you need more functionality, you install new apps. Packages are to R as apps are to your phone’s operating system. The <a href="https://swirlstats.com/students.html">swirl</a> package is a great way to learn how to use the R programming language. Install the package, run it, and learn R in the R console! Before we start we need to download a swirl course that we can use to test our understanding so far. <a href="https://github.com/scottyla19/as-r-intro/blob/master/AS_Intro_to_R.swc?raw=true">Download this file</a>.</p>
+<p>We need to install a package before so that we can complete a minilab. We can think of a package like an app on our phone. When you first turn on a new phone you have the basic functionality that all other phones have. If you need more functionality, you install new apps. Packages are to R as apps are to your phone’s operating system. The <a href="https://swirlstats.com/students.html">swirl</a> package is a great way to learn how to use the R programming language. Install the package, run it, and learn R in the R console! Before we start we need to download a swirl course that we can use to test our understanding so far. <a href="https://github.com/scottyla19/as-r-intro/blob/master/AS_Intro_to_R.swc?raw=true">Download this file</a> so we can use it later.</p>
 <p>Type the following code in the console. Notice once you start typing RStudio provides hints. You can press <code>tab</code> to select the function you want. We need to first download and install the package with <code>install.packages()</code> function.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&#39;swirl&#39;</span>)</code></pre></div>
 <p>The code above will start a process that will download and install the necessary parts so that we can use the swirl package.</p>
 <p>Once the package is installed we need to tell R to use it with the <code>library()</code> function.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(swirl)</code></pre></div>
-<p>Now we can start the swirl app with the <code>swirl()</code> function.</p>
+<p>Next, we need to install the course that we downloaded from above. The <code>install_course()</code> function will allow us to select a file to install as a course. Type the following command into the console and then find the <code>AS_Intro_to_R.swc</code> file. The file should be in your Downloads folder.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install_course</span>()</code></pre></div>
+<p>Now we can start the swirl app with the <code>swirl()</code> function. The swirl program will ask you questions, allow you to type your answer, and provide feedback, all in the R console.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">swirl</span>()</code></pre></div>
-</div>
-<div id="the-swirl-package" class="section level2">
-<h2><span class="header-section-number">4.2</span> The swirl package</h2>
+<p>Answer the initial setup questions and be sure to choose the “AS Intro to R” course. The course covers the topics we discussed in the walkthrough. Good Luck!</p>
 
 </div>
 </div>
